@@ -7,14 +7,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mdp = password_hash($_POST['password'], PASSWORD_BCRYPT);
     $login = $_POST["login"];
     
-    $photo = "uploads/default-avatar.png"; // Valeur par défaut
+    $photo = "uploads/default-avatar.png"; 
 
     if (!empty($_FILES["photo"]["name"])) {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-        // Vérifier si c'est une vraie image
+
         $check = getimagesize($_FILES["photo"]["tmp_name"]);
         if ($check !== false) {
             if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {

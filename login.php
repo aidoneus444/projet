@@ -6,14 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = $_POST['login'];
     $password = $_POST['password'];
 
-    // Remplacez ces valeurs par celles de votre base de données
-    $adminLogin = "admin"; // Login administrateur
-    $adminPassword = "passer"; // Mot de passe administrateur (hashé en production)
+    $adminLogin = "admin"; 
+    $adminPassword = "passer"; 
 
-    // Vérification des identifiants
+   
     if ($login === $adminLogin && $password === $adminPassword) {
         $_SESSION['admin_logged_in'] = true;
-        header("Location: redirection.php"); // Redirection vers le tableau de bord
+        header("Location: redirection.php"); 
         exit();
     } else {
         $error = "Identifiants incorrects.";

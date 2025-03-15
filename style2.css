@@ -1,6 +1,5 @@
-/* style2.css */
 
-/* Styles généraux */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -31,7 +30,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 200px); /* Ajuster en fonction de la hauteur du header et du footer */
+    height: calc(100vh - 200px); 
 }
 
 .content {
